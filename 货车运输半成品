@@ -1,0 +1,59 @@
+#include <iostream>
+#include <cstdio>
+#include <queue>
+#include <algorithm>
+#include <map>
+#include <set>
+#include <cmath>
+using namespace std;
+
+const int MAXN=10005;    	//点 
+const int MAXX=50005;		//边 
+const int MAXD=25;			//指数 
+const int INF=10000000;		//最大值 
+
+int n,m,u,v,c,t;
+int father[MAXN];
+
+inline bool max(int a,int b){if(a>b) return a;return b;}
+inline bool min(int a,int b){if(a<b) return a;return b;}
+
+struct edge
+{
+	friend bool operator < (const edge &a,const edge &b)
+	 {
+	return a.c>b.c;	
+	 }
+	int u;
+	int v;
+	int c;
+}D[MAXN];
+priority_queue<edge>q;
+
+void init()
+{
+	scanf("%d%d",&n,&m);
+	for(int i=1;i<=m;i++)
+	 {
+	 	scanf("%d%d%d",&D[i].u,&D[i].v,&D[i].c);
+	 	q.push(D[i]);
+	 }
+}
+
+void Union(int x,int y)
+{
+	fx=Find_set(x);
+	fy=Find_set(y);
+}
+
+void kruskal()
+{
+	
+}
+
+int main()
+{
+	init();
+	Builetree();
+	kruskal();
+}
