@@ -1,3 +1,4 @@
+//USACO
 /*
 	LANG:C++11
 	PROG:beads
